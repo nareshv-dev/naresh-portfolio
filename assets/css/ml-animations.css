@@ -54,13 +54,13 @@
 
 .ml-card {
     position: relative;
-    overflow: hidden;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(0, 102, 255, 0.2);
+    overflow: visible;
+    background: white;
+    border: 1px solid rgba(99, 102, 241, 0.2);
     border-radius: 10px;
     padding: 20px;
     margin: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .ml-card::before {

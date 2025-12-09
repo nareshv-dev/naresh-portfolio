@@ -1,116 +1,36 @@
-// Initialize AOS (Animate On Scroll)
-AOS.init({
-    duration: 1000,
-    once: true,
-    offset: 100
-});
-
-// Initialize Particles.js
-particlesJS('particles-js', {
-    particles: {
-        number: {
-            value: 80,
-            density: {
-                enable: true,
-                value_area: 800
-            }
-        },
-        color: {
-            value: '#00ffff'
-        },
-        shape: {
-            type: 'circle'
-        },
-        opacity: {
-            value: 0.5,
-            random: false
-        },
-        size: {
-            value: 3,
-            random: true
-        },
-        line_linked: {
-            enable: true,
-            distance: 150,
-            color: '#00ffff',
-            opacity: 0.4,
-            width: 1
-        },
-        move: {
-            enable: true,
-            speed: 2,
-            direction: 'none',
-            random: false,
-            straight: false,
-            out_mode: 'out',
-            bounce: false
-        }
-    },
-    interactivity: {
-        detect_on: 'canvas',
-        events: {
-            onhover: {
-                enable: true,
-                mode: 'repulse'
-            },
-            onclick: {
-                enable: true,
-                mode: 'push'
-            },
-            resize: true
-        }
-    },
-    retina_detect: true
-});
+// Wait for DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
 
 // Mobile Navigation
 const burger = document.querySelector('.burger');
 const nav = document.querySelector('.nav-links');
 const navLinks = document.querySelectorAll('.nav-links li');
 
-burger.addEventListener('click', () => {
-    // Toggle Navigation
-    nav.classList.toggle('active');
-
-    // Animate Links
-    navLinks.forEach((link, index) => {
-        if (link.style.animation) {
-            link.style.animation = '';
-        } else {
-            link.style.animation = `fadeIn 0.5s ease forwards ${index / 7 + 0.3}s`;
-        }
+if (burger) {
+    burger.addEventListener('click', () => {
+        nav.classList.toggle('active');
+        burger.classList.toggle('toggle');
     });
-
-    // Burger Animation
-    burger.classList.toggle('toggle');
-});
-
-// Typing Animation
-const typed = new Typed('.typed-text', {
-    strings: [
-        'Machine Learning Engineer',
-        '<span class="glow-text">AI Specialist</span>',
-        'Data Scientist',
-        '<span class="glow-text">Deep Learning Expert</span>'
-    ],
-    typeSpeed: 100,
-    backSpeed: 50,
-    backDelay: 2000,
-    loop: true,
-    cursorChar: '▋',
-    html: true
-});
+}
 
 // Skills Animation
+// Skills Animation
 const skills = [
-    { name: 'Python', level: 95 },
-    { name: 'Machine Learning', level: 90 },
-    { name: 'Deep Learning', level: 85 },
-    { name: 'TensorFlow', level: 85 },
-    { name: 'PyTorch', level: 80 },
-    { name: 'Scikit-learn', level: 90 },
-    { name: 'Data Analysis', level: 88 },
-    { name: 'Neural Networks', level: 85 }
+    { name: 'Python', level: 95, category: 'language' },
+    { name: 'Java', level: 80, category: 'language' },
+    { name: 'TensorFlow', level: 90, category: 'framework' },
+    { name: 'Keras', level: 88, category: 'framework' },
+    { name: 'PyTorch', level: 85, category: 'framework' },
+    { name: 'Scikit-Learn', level: 90, category: 'framework' },
+    { name: 'Pandas', level: 92, category: 'framework' },
+    { name: 'NumPy', level: 90, category: 'framework' },
+    { name: 'OpenCV', level: 88, category: 'framework' },
+    { name: 'MediaPipe', level: 85, category: 'framework' },
+    { name: 'Machine Learning', level: 92, category: 'skill' },
+    { name: 'Deep Learning', level: 88, category: 'skill' },
+    { name: 'Computer Vision', level: 90, category: 'skill' },
+    { name: 'Data Science', level: 87, category: 'skill' }
+];
 ];
 
 const skillsGrid = document.querySelector('.skills-grid');
@@ -118,11 +38,10 @@ const skillsGrid = document.querySelector('.skills-grid');
 skills.forEach(skill => {
     const skillItem = document.createElement('div');
     skillItem.className = 'skill-item';
-    skillItem.setAttribute('data-aos', 'fade-up');
     skillItem.innerHTML = `
         <h3>${skill.name}</h3>
         <div class="progress">
-            <div class="progress-bar" style="width: ${skill.level}%"></div>
+            <div class="progress-bar" style="width: ${skill.level}%; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
         </div>
         <p>${skill.level}%</p>
     `;
@@ -132,13 +51,37 @@ skills.forEach(skill => {
 // Projects
 const projects = [
     {
-        title: 'Project 1',
-        description: 'Description of project 1',
-        image: 'assets/images/project1.jpg',
-        technologies: ['HTML', 'CSS', 'JavaScript'],
-        link: '#'
+        title: 'PII Detection and Encryption',
+        description: 'Developed an AI-driven system for adaptive PII detection and encryption across text and image data, ensuring privacy compliance and scalability.',
+        image: 'https://via.placeholder.com/400x250/667eea/ffffff?text=PII+Detection',
+        technologies: ['TensorFlow', 'OpenCV', 'Python', 'Cryptography'],
+        link: '#',
+        date: 'Sep 2024 - Oct 2024'
     },
-    // Add more projects here
+    {
+        title: 'Real-Time Fall Detection System',
+        description: 'Developed a real-time fall detection system for elderly care, achieving 96% accuracy using monocular cameras and ML-based motion analysis.',
+        image: 'https://via.placeholder.com/400x250/8b5cf6/ffffff?text=Fall+Detection',
+        technologies: ['MediaPipe', 'TensorFlow', 'Streamlit', 'Computer Vision'],
+        link: '#',
+        date: 'Oct 2024 - Nov 2024'
+    },
+    {
+        title: 'Drone-Assisted Victim Identification',
+        description: 'Developed a drone-based disaster relief system using AI for real-time victim identification and efficient rescue operations.',
+        image: 'https://via.placeholder.com/400x250/ec4899/ffffff?text=Drone+AI',
+        technologies: ['TensorFlow', 'OpenCV', 'Image Processing'],
+        link: '#',
+        date: 'Dec 2024 - Feb 2025'
+    },
+    {
+        title: 'Insect Contamination Detection',
+        description: 'Research project at NIT Trichy focused on detecting insect contamination using advanced machine learning and computer vision techniques.',
+        image: 'https://via.placeholder.com/400x250/4facfe/ffffff?text=Research+Project',
+        technologies: ['Deep Learning', 'Computer Vision', 'Research'],
+        link: '#',
+        date: 'Jun 2025 - Aug 2025'
+    }
 ];
 
 const projectsGrid = document.querySelector('.projects-grid');
@@ -146,16 +89,16 @@ const projectsGrid = document.querySelector('.projects-grid');
 projects.forEach(project => {
     const projectCard = document.createElement('div');
     projectCard.className = 'project-card';
-    projectCard.setAttribute('data-aos', 'fade-up');
     projectCard.innerHTML = `
         <img src="${project.image}" alt="${project.title}" class="project-image">
         <div class="project-info">
+            <div class="project-date">${project.date}</div>
             <h3>${project.title}</h3>
             <p>${project.description}</p>
             <div class="project-technologies">
-                ${project.technologies.map(tech => `<span>${tech}</span>`).join('')}
+                ${project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
             </div>
-            <a href="${project.link}" class="btn primary">View Project</a>
+            <a href="${project.link}" class="btn primary">View Details</a>
         </div>
     `;
     projectsGrid.appendChild(projectCard);
@@ -179,3 +122,5 @@ contactForm.addEventListener('submit', (e) => {
     alert('Thank you for your message! I will get back to you soon.');
     contactForm.reset();
 });
+
+}); // End of DOMContentLoaded

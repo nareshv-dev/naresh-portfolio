@@ -5,22 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naresh V - Portfolio</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/animations.css">
-    <link rel="stylesheet" href="assets/css/ml-animations.css">
+    <link rel="stylesheet" href="assets/css/enhanced.css">
+    <link rel="stylesheet" href="assets/css/orbit-animation.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="logo">NV</div>
+        <div class="logo">Naresh V</div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#achievements">Achievements</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="burger">
@@ -31,18 +30,17 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero matrix-bg">
-        <div id="particles-js"></div>
-        <div class="hero-content robot-border" data-aos="fade-up">
-            <div class="robot-eyes">
-                <span class="robot-eye"></span>
-                <span class="robot-eye"></span>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm <span class="highlight">Naresh V</span></h1>
+            <p class="typewriter">AI Engineer • ML Research Enthusiast</p>
+            <div class="hero-subtitle">
+                <p>Aspiring ML Engineer driven by a profound curiosity for exploring the limitless potential of data</p>
             </div>
-            <h1>Hi, I'm <span class="highlight glow-text">Naresh V</span></h1>
-            <p class="typewriter">I'm a <span class="typed-text"></span></p>
             <div class="cta-buttons">
                 <a href="#projects" class="btn primary">View My Work</a>
                 <a href="#contact" class="btn secondary">Contact Me</a>
+                <a href="Naresh V Resume.pdf" class="btn secondary" download>Download Resume</a>
             </div>
         </div>
     </section>
@@ -50,28 +48,76 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">About Me</h2>
+            <h2 class="section-title">About Me</h2>
             <div class="about-content">
-                <div class="about-text ml-card" data-aos="fade-right">
-                    <div class="data-stream"></div>
-                    <p class="tensor-flow">As a Machine Learning Engineer and AI Specialist, I specialize in developing innovative solutions using cutting-edge ML technologies. With a deep understanding of neural networks, deep learning, and data science, I create intelligent systems that solve real-world problems.</p>
-                    <p class="brain-wave"></p>
-                    <p>My expertise includes:</p>
-                    <ul>
-                        <li>Deep Learning & Neural Networks</li>
-                        <li>Computer Vision & Natural Language Processing</li>
-                        <li>TensorFlow & PyTorch Implementation</li>
-                        <li>Data Analysis & Visualization</li>
-                    </ul>
+                <div class="about-image-left">
+                    <div class="profile-circle">
+                        <img src="assets/images/profile.jpg" alt="Naresh V" class="profile-image-circle">
+                    </div>
                 </div>
-                <div class="about-image" data-aos="fade-left">
-                    <div class="profile-container">
-                        <img src="assets/images/profile.jpg" alt="Naresh V" class="profile-image">
-                        <div class="profile-overlay"></div>
-                        <div class="neural-network">
-                            <div class="neural-node"></div>
-                            <div class="neural-node"></div>
-                            <div class="neural-node"></div>
+                <div class="about-text-right">
+                    <h3 style="color: var(--accent-color); font-size: 1.5rem; margin-bottom: 1.5rem;">AI Engineer • ML Research Enthusiast</h3>
+                    
+                    <p>I am a dedicated and passionate Machine Learning and AI enthusiast with a strong foundation in Computer Science. Currently pursuing my Bachelor of Engineering at KPR Institute of Engineering and Technology, I am deeply driven by the desire to understand how intelligent systems learn, adapt, and create meaningful impact in the real world.</p>
+                    
+                    <p>My curiosity for AI pushes me to constantly explore new ideas, experiment with emerging technologies, and refine my technical abilities. I enjoy diving into the logic behind algorithms, understanding complex patterns in data, and building solutions that combine innovation with practicality.</p>
+                    
+                    <p>I have a keen interest in areas such as applied machine learning, deep learning, computer vision, and AI-powered automation. I believe in continuous learning and enjoy engaging with challenging problems that encourage me to grow both technically and creatively.</p>
+                    
+                    <p>With a mindset focused on improvement and exploration, I aspire to contribute to impactful AI solutions that make a difference. I'm excited about the journey ahead and always open to learning, collaborating, and building something meaningful.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="timeline">
+                <!-- Experience Item 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">June 2025 - August 2025</div>
+                        <h3>Research Assistant</h3>
+                        <h4>National Institute of Technology (NIT), Trichy</h4>
+                        <p>Currently working on a research project focused on Insect Contamination Detection. Conducting research involving problem formulation, literature review, data handling, and solution implementation under expert guidance.</p>
+                        <div class="tech-tags">
+                            <span>Research</span>
+                            <span>Computer Vision</span>
+                            <span>ML</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Item 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">January 2025 - February 2025</div>
+                        <h3>Data Analyst Intern</h3>
+                        <h4>Fourth Dimension Advisory Company, Chennai</h4>
+                        <p>Completed a data visualization internship, gaining hands-on experience in developing interactive dashboards and converting complex datasets into meaningful visual insights.</p>
+                        <div class="tech-tags">
+                            <span>Power BI</span>
+                            <span>Excel</span>
+                            <span>Streamlit</span>
+                            <span>Python</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Item 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">April 2023 - May 2023</div>
+                        <h3>Machine Learning Internship</h3>
+                        <h4>Kyungpook National University, South Korea (Remote)</h4>
+                        <p>Completed a Machine Learning Internship focused on Artificial Intelligence (AI), Machine Learning (ML), and Deep Learning (DL) fundamentals. Implemented key ML workflows including data preprocessing, model training, and evaluation.</p>
+                        <div class="tech-tags">
+                            <span>TensorFlow</span>
+                            <span>Pandas</span>
+                            <span>NumPy</span>
+                            <span>Ultralytics</span>
                         </div>
                     </div>
                 </div>
@@ -82,7 +128,51 @@
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">My Skills</h2>
+            <h2 class="section-title">My Tech Stack</h2>
+            
+            <!-- Orbiting Tech Stack -->
+            <div class="skills-orbit-container">
+                <div class="orbit-center">
+                    <div class="center-orb"></div>
+                    <div class="tech-orbit">
+                        <div class="tech-icon">
+                            <i class="fab fa-python"></i>
+                            <span class="tech-icon-label">Python</span>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="fas fa-brain"></i>
+                            <span class="tech-icon-label">TensorFlow</span>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="fas fa-project-diagram"></i>
+                            <span class="tech-icon-label">PyTorch</span>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="fas fa-database"></i>
+                            <span class="tech-icon-label">Pandas</span>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="fas fa-eye"></i>
+                            <span class="tech-icon-label">OpenCV</span>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="fas fa-chart-line"></i>
+                            <span class="tech-icon-label">Scikit-learn</span>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="fab fa-java"></i>
+                            <span class="tech-icon-label">Java</span>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="fas fa-robot"></i>
+                            <span class="tech-icon-label">Keras</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Traditional Skills Grid -->
+            <h3 style="text-align: center; margin: 3rem 0 2rem; font-size: 1.8rem;">Skills Proficiency</h3>
             <div class="skills-grid">
                 <!-- Skill items will be added dynamically via JavaScript -->
             </div>
@@ -92,9 +182,62 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">My Projects</h2>
+            <h2 class="section-title">My Projects</h2>
             <div class="projects-grid">
                 <!-- Project cards will be added here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements">
+        <div class="container">
+            <h2 class="section-title">Achievements & Certifications</h2>
+            
+            <div class="achievements-grid">
+                <!-- Hackathon Achievements -->
+                <div class="achievement-card">
+                    <div class="achievement-icon">🏆</div>
+                    <h3>3rd Prize - Brilliant Bharath Hackathon</h3>
+                    <p>March 2025</p>
+                    <p>Conducted by Arivial Sangam</p>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-icon">🥇</div>
+                    <h3>1st Prize - KPR Ignitron Trophy</h3>
+                    <p>September 2024</p>
+                    <p>Hackathon at KPR Institute</p>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-icon">🥉</div>
+                    <h3>3rd Prize - IEEE Ideatronic</h3>
+                    <p>May 2025</p>
+                    <p>Paper Presentation Event at KPRIET</p>
+                </div>
+
+                <!-- Certifications -->
+                <div class="achievement-card">
+                    <div class="achievement-icon">📜</div>
+                    <h3>Machine Learning Specialization</h3>
+                    <p>November 2023 - January 2024</p>
+                    <p>DeepLearning.ai - Mastered core ML algorithms and model optimization</p>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-icon">📚</div>
+                    <h3>Kaggle Courses</h3>
+                    <p>June 2023 - February 2024</p>
+                    <p>Intro to Programming, ML, and Pandas</p>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-icon">💻</div>
+                    <h3>GDG's Devfest</h3>
+                    <p>October 2023 - November 2023</p>
+                    <p>Learned Streamlit, RAG using LangChain, LLM using Vertex Palm models</p>
+                </div>
             </div>
         </div>
     </section>
@@ -102,18 +245,19 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
+            <h2 class="section-title">Get In Touch</h2>
             <div class="contact-content">
-                <form class="contact-form" data-aos="fade-up">
+                <form class="contact-form">
                     <input type="text" placeholder="Your Name" required>
                     <input type="email" placeholder="Your Email" required>
                     <textarea placeholder="Your Message" required></textarea>
                     <button type="submit" class="btn primary">Send Message</button>
                 </form>
-                <div class="social-links" data-aos="fade-up">
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+                <div class="social-links">
+                    <a href="https://github.com/nareshv-dev" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/naresh-v" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:nareshvenkadesh@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <a href="tel:+918122815315"><i class="fas fa-phone"></i></a>
                 </div>
             </div>
         </div>
@@ -123,8 +267,6 @@
         <p>&copy; 2025 Naresh V. All rights reserved.</p>
     </footer>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>
