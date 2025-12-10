@@ -1,0 +1,46 @@
+---
+---
+
+<nav class="fixed top-0 left-0 w-full bg-dark/95 backdrop-blur-sm shadow-lg shadow-primary/10 z-50">
+  <div class="container mx-auto px-6 py-4">
+    <div class="flex justify-between items-center">
+      <div class="text-2xl font-bold text-primary">Naresh V</div>
+      
+      <ul class="hidden md:flex space-x-8">
+        <li><a href="#home" class="hover:text-primary transition-colors">Home</a></li>
+        <li><a href="#about" class="hover:text-primary transition-colors">About</a></li>
+        <li><a href="#experience" class="hover:text-primary transition-colors">Experience</a></li>
+        <li><a href="#skills" class="hover:text-primary transition-colors">Skills</a></li>
+        <li><a href="#projects" class="hover:text-primary transition-colors">Projects</a></li>
+        <li><a href="#achievements" class="hover:text-primary transition-colors">Achievements</a></li>
+        <li><a href="#contact" class="hover:text-primary transition-colors">Contact</a></li>
+      </ul>
+
+      <button class="md:hidden text-white" id="mobile-menu-btn">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="hidden md:hidden mt-4" id="mobile-menu">
+      <ul class="flex flex-col space-y-4">
+        <li><a href="#home" class="block hover:text-primary transition-colors">Home</a></li>
+        <li><a href="#about" class="block hover:text-primary transition-colors">About</a></li>
+        <li><a href="#experience" class="block hover:text-primary transition-colors">Experience</a></li>
+        <li><a href="#skills" class="block hover:text-primary transition-colors">Skills</a></li>
+        <li><a href="#projects" class="block hover:text-primary transition-colors">Projects</a></li>
+        <li><a href="#achievements" class="block hover:text-primary transition-colors">Achievements</a></li>
+        <li><a href="#contact" class="block hover:text-primary transition-colors">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  
+  btn?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+  });
+</script>
