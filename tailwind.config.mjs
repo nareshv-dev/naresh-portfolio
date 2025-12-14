@@ -4,15 +4,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#3A7CA5',      // Darker medium blue - main theme
-        secondary: '#16C6D8',    // Vibrant turquoise - accents & highlights
-        accent: '#FFE3B3',       // Cream - warm accents
-        dark: '#1F4E6B',         // Darker blue - backgrounds
-        'dark-purple': '#265A7A', // Medium dark blue
-        'sea-dark': '#1F4E6B',
-        'sea-medium': '#3A7CA5',
-        'sea-turquoise': '#16C6D8',
-        'sea-cream': '#FFE3B3',
+        primary: '#1e3a5f',      // Navy blue
+        secondary: '#2563eb',    // Accent blue for hover
+        accent: '#60a5fa',       // Light blue accent
+        dark: '#0f172a',         // Dark navy
+        'dark-purple': '#1e293b', // Slightly lighter navy
+        navy: '#0f172a',
+        'navy-light': '#1e3a5f',
+        'navy-medium': '#1e293b',
       },
     },
   },

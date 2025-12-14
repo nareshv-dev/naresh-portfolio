@@ -1,25 +1,25 @@
 ---
 ---
 
-<nav class="fixed top-0 left-0 w-full bg-sea-dark/95 backdrop-blur-sm shadow-lg shadow-primary/20 z-50 border-b border-secondary/20">
+<nav class="fixed top-0 left-0 w-full bg-navy/95 backdrop-blur-sm shadow-lg z-50 border-b border-white/10">
   <div class="container mx-auto px-6 py-4">
     <div class="flex justify-between items-center">
-      <div class="text-2xl font-bold text-secondary">Naresh Venkadesh</div>
+      <div class="text-2xl font-bold text-white">Naresh Venkadesh</div>
       
       <ul class="hidden md:flex space-x-8">
-        <li><a href="#home" class="hover:text-secondary transition-colors">Home</a></li>
-        <li><a href="#about" class="hover:text-secondary transition-colors">About</a></li>
-        <li><a href="#experience" class="hover:text-secondary transition-colors">Experience</a></li>
-        <li><a href="#skills" class="hover:text-secondary transition-colors">Skills</a></li>
-        <li><a href="#projects" class="hover:text-secondary transition-colors">Projects</a></li>
-        <li><a href="#achievements" class="hover:text-secondary transition-colors">Achievements</a></li>
-        <li><a href="#contact" class="hover:text-secondary transition-colors">Contact</a></li>
+        <li><a href="#home" class="text-white/80 hover:text-white transition-colors">Home</a></li>
+        <li><a href="#about" class="text-white/80 hover:text-white transition-colors">About</a></li>
+        <li><a href="#experience" class="text-white/80 hover:text-white transition-colors">Experience</a></li>
+        <li><a href="#skills" class="text-white/80 hover:text-white transition-colors">Skills</a></li>
+        <li><a href="#projects" class="text-white/80 hover:text-white transition-colors">Projects</a></li>
+        <li><a href="#achievements" class="text-white/80 hover:text-white transition-colors">Achievements</a></li>
+        <li><a href="#contact" class="text-white/80 hover:text-white transition-colors">Contact</a></li>
       </ul>
 
       <div class="flex items-center gap-4">
         <!-- Theme Toggle -->
-        <button id="theme-toggle" class="w-10 h-10 rounded-lg bg-primary border border-secondary/30 hover:bg-secondary hover:border-secondary flex items-center justify-center transition-all shadow-lg shadow-primary/20" aria-label="Toggle theme">
-          <i class="fas fa-moon text-accent" id="theme-icon"></i>
+        <button id="theme-toggle" class="w-10 h-10 rounded-lg bg-white/10 border border-white/20 hover:bg-white/20 flex items-center justify-center transition-all" aria-label="Toggle theme">
+          <i class="fas fa-moon text-white" id="theme-icon"></i>
         </button>
         
         <button class="md:hidden text-white" id="mobile-menu-btn">
@@ -30,13 +30,13 @@
     <!-- Mobile Menu -->
     <div class="hidden md:hidden mt-4" id="mobile-menu">
       <ul class="flex flex-col space-y-4">
-        <li><a href="#home" class="block hover:text-secondary transition-colors">Home</a></li>
-        <li><a href="#about" class="block hover:text-secondary transition-colors">About</a></li>
-        <li><a href="#experience" class="block hover:text-secondary transition-colors">Experience</a></li>
-        <li><a href="#skills" class="block hover:text-secondary transition-colors">Skills</a></li>
-        <li><a href="#projects" class="block hover:text-secondary transition-colors">Projects</a></li>
-        <li><a href="#achievements" class="block hover:text-secondary transition-colors">Achievements</a></li>
-        <li><a href="#contact" class="block hover:text-secondary transition-colors">Contact</a></li>
+        <li><a href="#home" class="block text-white/80 hover:text-white transition-colors">Home</a></li>
+        <li><a href="#about" class="block text-white/80 hover:text-white transition-colors">About</a></li>
+        <li><a href="#experience" class="block text-white/80 hover:text-white transition-colors">Experience</a></li>
+        <li><a href="#skills" class="block text-white/80 hover:text-white transition-colors">Skills</a></li>
+        <li><a href="#projects" class="block text-white/80 hover:text-white transition-colors">Projects</a></li>
+        <li><a href="#achievements" class="block text-white/80 hover:text-white transition-colors">Achievements</a></li>
+        <li><a href="#contact" class="block text-white/80 hover:text-white transition-colors">Contact</a></li>
       </ul>
     </div>
   </div>
@@ -80,9 +80,9 @@
   function updateThemeIcon(theme: string) {
     if (themeIcon) {
       if (theme === 'dark') {
-        themeIcon.className = 'fas fa-moon text-accent';
+        themeIcon.className = 'fas fa-moon text-white';
       } else {
-        themeIcon.className = 'fas fa-sun text-primary';
+        themeIcon.className = 'fas fa-sun text-navy';
       }
     }
   }
