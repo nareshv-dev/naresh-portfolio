@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <rect width="128" height="128" rx="28" fill="#0a0a0a"/>
+  <!-- Stylish italic bold N -->
+  <text x="64" y="98" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="900" font-style="italic" font-size="92" fill="white" letter-spacing="-4">N</text>
+  <!-- Subtle accent underline -->
+  <rect x="34" y="104" width="60" height="3" rx="1.5" fill="white" opacity="0.3"/>
+</svg>
+</svg>

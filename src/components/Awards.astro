@@ -1,0 +1,115 @@
+---
+const awards = [
+  {
+    event: "Brilliant Bharath Hackathon",
+    organizer: "Arivial Sangam",
+    prize: "3rd Prize",
+    type: "Hackathon",
+    icon: "fas fa-code",
+    color: "from-amber-400 to-yellow-500",
+  },
+  {
+    event: "KPR Ignitron Trophy",
+    organizer: "KPRIET",
+    prize: "1st Prize",
+    type: "Hackathon",
+    icon: "fas fa-code",
+    color: "from-yellow-300 to-amber-400",
+  },
+  {
+    event: 'Nehru College "Cybernautz"',
+    organizer: "Nehru College",
+    prize: "1st Prize",
+    type: "Paper Presentation",
+    icon: "fas fa-file-alt",
+    color: "from-yellow-300 to-amber-400",
+  },
+  {
+    event: "KGiSL College",
+    organizer: "KGiSL Institute",
+    prize: "2nd Prize",
+    type: "Paper Presentation",
+    icon: "fas fa-file-alt",
+    color: "from-gray-300 to-gray-400",
+  },
+  {
+    event: "KGiSL Exotica",
+    organizer: "KGiSL Institute",
+    prize: "3rd Prize ",
+    type: "Paper Presentation",
+    icon: "fas fa-file-alt",
+    color: "from-amber-400 to-yellow-500",
+  },
+  {
+    event: "IEEE Ideatronic",
+    organizer: "KPRIET",
+    prize: "3rd Prize",
+    type: "Paper Presentation",
+    icon: "fas fa-file-alt",
+    color: "from-amber-400 to-yellow-500",
+  },
+];
+
+function getMedalIcon(prize: string) {
+  if (prize.includes("1st")) return { icon: "fas fa-trophy", color: "text-yellow-400", bg: "bg-yellow-400/10 border-yellow-400/30" };
+  if (prize.includes("2nd")) return { icon: "fas fa-medal", color: "text-gray-300", bg: "bg-gray-300/10 border-gray-300/30" };
+  return { icon: "fas fa-award", color: "text-amber-500", bg: "bg-amber-500/10 border-amber-500/30" };
+}
+---
+
+<section id="achievements" class="py-20 px-6 bg-navy relative overflow-hidden">
+  <!-- Background glow -->
+  <div class="absolute top-1/3 right-0 w-[500px] h-[500px] bg-yellow-500/5 rounded-full blur-[120px] pointer-events-none"></div>
+  <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-accent/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+  <div class="container mx-auto max-w-5xl relative z-10">
+    <!-- Section Header -->
+    <div class="text-center mb-14">
+      <span class="text-accent text-base font-semibold tracking-widest uppercase">Recognition</span>
+      <h2 class="text-4xl font-bold text-white mt-2">Honors & Awards</h2>
+      <div class="w-16 h-1 bg-accent mx-auto mt-4 rounded-full"></div>
+      <p class="text-white/50 mt-4 max-w-lg mx-auto text-base">Achievements across hackathons, paper presentations, and technical events.</p>
+    </div>
+
+    <!-- Awards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      {awards.map((award, index) => {
+        const medal = getMedalIcon(award.prize);
+        return (
+          <div
+            class="group relative p-5 rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-sm hover:border-white/25 transition-all duration-300 hover:shadow-lg hover:shadow-white/5 hover:-translate-y-1"
+            style={`animation-delay: ${index * 0.08}s`}
+          >
+            <!-- Medal icon -->
+            <div class={`w-11 h-11 rounded-xl ${medal.bg} border flex items-center justify-center mb-4`}>
+              <i class={`${medal.icon} text-lg ${medal.color}`}></i>
+            </div>
+
+            <!-- Prize badge -->
+            <div class="inline-block mb-3">
+              <span class={`text-xs font-bold tracking-wide uppercase px-3 py-1 rounded-full bg-gradient-to-r ${award.color} text-navy`}>
+                {award.prize}
+              </span>
+            </div>
+
+            <!-- Event name -->
+            <h3 class="text-white font-bold text-lg leading-snug mb-1">{award.event}</h3>
+
+            <!-- Details -->
+            <div class="flex items-center gap-3 mt-3">
+              <span class="text-white/40 text-xs flex items-center gap-1.5">
+                <i class={`${award.icon} text-[10px]`}></i>
+                {award.type}
+              </span>
+              <span class="text-white/20">•</span>
+              <span class="text-white/40 text-xs flex items-center gap-1.5">
+                <i class="fas fa-building text-[10px]"></i>
+                {award.organizer}
+              </span>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+</section>

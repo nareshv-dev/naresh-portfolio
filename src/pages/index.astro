@@ -6,6 +6,8 @@ import Experience from '../components/Experience.astro';
 import Skills from '../components/Skills.astro';
 import Projects from '../components/Projects.astro';
 import Certifications from '../components/Certifications.astro';
+import Awards from '../components/Awards.astro';
+import Contact from '../components/Contact.astro';
 ---
 
 <Layout title="Naresh V - AI Engineer Portfolio">
@@ -21,15 +23,7 @@ import Certifications from '../components/Certifications.astro';
 
   <Certifications />
 
-  <section id="achievements" class="min-h-screen py-20 px-6 bg-dark">
-    <div class="container mx-auto">
-      <h2 class="text-4xl font-bold text-center mb-12">Achievements</h2>
-    </div>
-  </section>
+  <Awards />
 
-  <section id="contact" class="min-h-screen py-20 px-6 bg-dark-purple">
-    <div class="container mx-auto">
-      <h2 class="text-4xl font-bold text-center mb-12">Contact</h2>
-    </div>
-  </section>
+  <Contact />
 </Layout>

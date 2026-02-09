@@ -4,7 +4,7 @@
 <nav class="fixed top-0 left-0 w-full bg-navy/95 backdrop-blur-sm shadow-lg z-50 border-b border-white/10">
   <div class="container mx-auto px-6 py-4">
     <div class="flex justify-between items-center">
-      <div class="text-2xl font-bold text-white">Naresh V</div>
+      <div class="text-2xl font-bold text-white">Naresh Venkadesh</div>
       
       <ul class="hidden md:flex space-x-8">
         <li><a href="#home" class="text-white/80 hover:text-white transition-colors">Home</a></li>
@@ -17,11 +17,6 @@
       </ul>
 
       <div class="flex items-center gap-4">
-        <!-- Theme Toggle -->
-        <button id="theme-toggle" class="w-10 h-10 rounded-lg bg-white/10 border border-white/20 hover:bg-white/20 flex items-center justify-center transition-all" aria-label="Toggle theme">
-          <i class="fas fa-moon text-white" id="theme-icon"></i>
-        </button>
-        
         <button class="md:hidden text-white" id="mobile-menu-btn">
         <i class="fas fa-bars text-2xl"></i>
       </button>
@@ -50,40 +45,4 @@
   btn?.addEventListener('click', () => {
     menu?.classList.toggle('hidden');
   });
-  
-  // Theme toggle
-  const themeToggle = document.getElementById('theme-toggle');
-  const themeIcon = document.getElementById('theme-icon');
-  const html = document.documentElement;
-  
-  // Check for saved theme preference or default to 'dark'
-  const currentTheme = localStorage.getItem('theme') || 'dark';
-  html.classList.add(currentTheme);
-  updateThemeIcon(currentTheme);
-  
-  themeToggle?.addEventListener('click', () => {
-    const isDark = html.classList.contains('dark');
-    
-    if (isDark) {
-      html.classList.remove('dark');
-      html.classList.add('light');
-      localStorage.setItem('theme', 'light');
-      updateThemeIcon('light');
-    } else {
-      html.classList.remove('light');
-      html.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-      updateThemeIcon('dark');
-    }
-  });
-  
-  function updateThemeIcon(theme: string) {
-    if (themeIcon) {
-      if (theme === 'dark') {
-        themeIcon.className = 'fas fa-moon text-white';
-      } else {
-        themeIcon.className = 'fas fa-sun text-navy';
-      }
-    }
-  }
 </script>
