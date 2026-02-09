@@ -1,0 +1,188 @@
+---
+const projects = [
+  {
+    title: "MedConnect: Offline AI Chatbot for Rural Healthcare",
+    date: "10/2025",
+    description: [
+      "Built an offline, multilingual medical chatbot to assist rural healthcare workers with symptom guidance and first-aid support.",
+      "Designed to function reliably in low-resource, internet-limited environments."
+    ],
+    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=340&fit=crop",
+    github: "https://github.com/nareshv-dev/rural-health-ai",
+    tags: ["NLP", "Healthcare AI", "Offline Systems"]
+  },
+  {
+    title: "AI-Driven Insect Contamination Detection System",
+    date: "06/2025 – 08/2025",
+    description: [
+      "Designed a system to identify insect contamination in agricultural products using structured analysis and advanced pattern recognition techniques."
+    ],
+    image: "/images/insect-detection.svg",
+    github: "https://github.com/nareshv-dev/Insect-Contamination-Detection",
+    tags: ["Computer Vision", "Agriculture", "Deep Learning"]
+  },
+  {
+    title: "Disaster Relief Through Drone-Assisted Victim Identification",
+    date: "12/2024 – 02/2025",
+    description: [
+      "Designed an AI-powered drone system for real-time victim detection and localization.",
+      "Implemented computer vision and deep learning pipelines for human detection and coordinate extraction from aerial imagery."
+    ],
+    image: "https://images.unsplash.com/photo-1508614589041-895b88991e3e?w=600&h=340&fit=crop",
+    github: "https://github.com/nareshv-dev/disaster-relief-drone-ai",
+    tags: ["Drones", "Object Detection", "Computer Vision"]
+  },
+  {
+    title: "Real-Time Fall Detection System for Elderly Patients",
+    date: "10/2024 – 11/2024",
+    description: [
+      "Developed a real-time monocular camera–based fall detection system achieving 96% accuracy using pose estimation."
+    ],
+    image: "/images/fall-detection.jpg",
+    github: "https://github.com/nareshv-dev/Fall-Detection-System",
+    tags: ["Pose Estimation", "Real-Time AI", "Healthcare"]
+  },
+  {
+    title: "PII Detection and Encryption for Secure Data Handling",
+    date: "09/2024 – 10/2024",
+    description: [
+      "Built an AI-based system to detect sensitive personal information across text and image data with secure encryption.",
+      "Ensured privacy compliance and scalability through optimized data processing."
+    ],
+    image: "/images/pii-detection.svg",
+    github: "https://github.com/nareshv-dev/PII-Detection-Encryption",
+    tags: ["NLP", "Data Privacy", "Encryption"]
+  }
+];
+---
+
+<section id="projects" class="py-20 px-6 bg-navy relative overflow-hidden">
+  <!-- Subtle background glow -->
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+  <div class="container mx-auto max-w-6xl relative z-10">
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <span class="text-accent text-base font-semibold tracking-widest uppercase">Portfolio</span>
+      <h2 class="text-4xl font-bold text-white mt-2">Projects</h2>
+      <div class="w-16 h-1 bg-accent mx-auto mt-4 rounded-full"></div>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {projects.map((project, index) => (
+        <div class="project-card group" style={`animation-delay: ${index * 0.1}s`}>
+          <!-- Image -->
+          <div class="relative overflow-hidden rounded-t-xl">
+            <img
+              src={project.image}
+              alt={project.title}
+              class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-transparent to-transparent opacity-60"></div>
+            <!-- Date badge -->
+            <div class="absolute bottom-3 left-3">
+              <span class="px-3 py-1 bg-accent/90 text-white text-xs font-semibold rounded-full backdrop-blur-sm">
+                {project.date}
+              </span>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="p-5 flex flex-col flex-1">
+            <!-- Title -->
+            <h3 class="text-lg font-bold text-white mb-3 leading-snug group-hover:text-accent transition-colors duration-300">
+              {project.title}
+            </h3>
+
+            <!-- Description -->
+            <ul class="space-y-2 mb-4 flex-1">
+              {project.description.map((point) => (
+                <li class="text-white/50 text-sm leading-relaxed flex items-start gap-2">
+                  <span class="text-accent mt-1.5 text-[6px]">●</span>
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
+
+            <!-- Tags -->
+            <div class="flex flex-wrap gap-2 mb-4">
+              {project.tags.map((tag) => (
+                <span class="px-2 py-0.5 text-[10px] font-medium tracking-wide uppercase rounded-full border border-white/20 text-white/50 bg-white/5">
+                  {tag}
+                </span>
+              ))}
+            </div>
+
+            <!-- Links -->
+            <div class="flex gap-3 mt-auto pt-3 border-t border-white/5">
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-link"
+              >
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    animation: card-fade 0.6s ease-out both;
+  }
+
+  .project-card:hover {
+    border-color: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(255, 255, 255, 0.1);
+  }
+
+  .project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.9rem;
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+
+  .project-link:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    transform: translateY(-1px);
+  }
+
+  @keyframes card-fade {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

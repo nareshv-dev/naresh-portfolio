@@ -2,38 +2,24 @@
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import Hero from '../components/Hero.astro';
+import Experience from '../components/Experience.astro';
+import Skills from '../components/Skills.astro';
+import Projects from '../components/Projects.astro';
+import Certifications from '../components/Certifications.astro';
 ---
 
 <Layout title="Naresh V - AI Engineer Portfolio">
   <Navbar />
   <Hero />
   
-  <!-- About Section - We'll build this next -->
-  <section id="about" class="min-h-screen py-20 px-6 bg-dark">
-    <div class="container mx-auto">
-      <h2 class="text-4xl font-bold text-center mb-12 text-white">About Me</h2>
-      <p class="text-center text-gray-400">Coming soon...</p>
-    </div>
-  </section>
+  <!-- Experience Section -->
+  <Experience />
 
-  <!-- Other sections placeholders -->
-  <section id="experience" class="min-h-screen py-20 px-6 bg-dark-purple">
-    <div class="container mx-auto">
-      <h2 class="text-4xl font-bold text-center mb-12">Experience</h2>
-    </div>
-  </section>
+  <Skills />
 
-  <section id="skills" class="min-h-screen py-20 px-6 bg-dark">
-    <div class="container mx-auto">
-      <h2 class="text-4xl font-bold text-center mb-12">Skills</h2>
-    </div>
-  </section>
+  <Projects />
 
-  <section id="projects" class="min-h-screen py-20 px-6 bg-dark-purple">
-    <div class="container mx-auto">
-      <h2 class="text-4xl font-bold text-center mb-12">Projects</h2>
-    </div>
-  </section>
+  <Certifications />
 
   <section id="achievements" class="min-h-screen py-20 px-6 bg-dark">
     <div class="container mx-auto">

@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="340" viewBox="0 0 600 340">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2d1f0e"/>
+      <stop offset="100%" stop-color="#1a1206"/>
+    </linearGradient>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" result="noise"/>
+      <feColorMatrix type="saturate" values="0" in="noise" result="grayNoise"/>
+      <feBlend in="SourceGraphic" in2="grayNoise" mode="multiply"/>
+    </filter>
+  </defs>
+
+  <!-- Background - rice/grain surface -->
+  <rect width="600" height="340" fill="url(#bg)"/>
+
+  <!-- Rice grains scattered -->
+  <g fill="#d4c5a0" opacity="0.7">
+    <!-- Row 1 -->
+    <ellipse cx="45" cy="30" rx="14" ry="5" transform="rotate(-20 45 30)"/>
+    <ellipse cx="90" cy="45" rx="14" ry="5" transform="rotate(15 90 45)"/>
+    <ellipse cx="140" cy="25" rx="14" ry="5" transform="rotate(-10 140 25)"/>
+    <ellipse cx="195" cy="40" rx="14" ry="5" transform="rotate(25 195 40)"/>
+    <ellipse cx="245" cy="28" rx="14" ry="5" transform="rotate(-5 245 28)"/>
+    <ellipse cx="300" cy="35" rx="14" ry="5" transform="rotate(30 300 35)"/>
+    <ellipse cx="355" cy="22" rx="14" ry="5" transform="rotate(-15 355 22)"/>
+    <ellipse cx="405" cy="42" rx="14" ry="5" transform="rotate(10 405 42)"/>
+    <ellipse cx="460" cy="30" rx="14" ry="5" transform="rotate(-25 460 30)"/>
+    <ellipse cx="515" cy="38" rx="14" ry="5" transform="rotate(20 515 38)"/>
+    <ellipse cx="565" cy="25" rx="14" ry="5" transform="rotate(-8 565 25)"/>
+    <!-- Row 2 -->
+    <ellipse cx="30" cy="70" rx="14" ry="5" transform="rotate(12 30 70)"/>
+    <ellipse cx="75" cy="82" rx="14" ry="5" transform="rotate(-18 75 82)"/>
+    <ellipse cx="125" cy="68" rx="14" ry="5" transform="rotate(22 125 68)"/>
+    <ellipse cx="175" cy="78" rx="14" ry="5" transform="rotate(-7 175 78)"/>
+    <ellipse cx="230" cy="72" rx="14" ry="5" transform="rotate(16 230 72)"/>
+    <ellipse cx="285" cy="85" rx="14" ry="5" transform="rotate(-22 285 85)"/>
+    <ellipse cx="340" cy="65" rx="14" ry="5" transform="rotate(8 340 65)"/>
+    <ellipse cx="395" cy="80" rx="14" ry="5" transform="rotate(-12 395 80)"/>
+    <ellipse cx="450" cy="72" rx="14" ry="5" transform="rotate(28 450 72)"/>
+    <ellipse cx="508" cy="78" rx="14" ry="5" transform="rotate(-16 508 78)"/>
+    <ellipse cx="555" cy="68" rx="14" ry="5" transform="rotate(5 555 68)"/>
+    <!-- Row 3 -->
+    <ellipse cx="50" cy="115" rx="14" ry="5" transform="rotate(-14 50 115)"/>
+    <ellipse cx="105" cy="125" rx="14" ry="5" transform="rotate(20 105 125)"/>
+    <ellipse cx="160" cy="110" rx="14" ry="5" transform="rotate(-8 160 110)"/>
+    <ellipse cx="210" cy="120" rx="14" ry="5" transform="rotate(14 210 120)"/>
+    <ellipse cx="265" cy="108" rx="14" ry="5" transform="rotate(-20 265 108)"/>
+    <ellipse cx="320" cy="128" rx="14" ry="5" transform="rotate(6 320 128)"/>
+    <ellipse cx="375" cy="112" rx="14" ry="5" transform="rotate(-10 375 112)"/>
+    <ellipse cx="430" cy="122" rx="14" ry="5" transform="rotate(18 430 122)"/>
+    <ellipse cx="485" cy="115" rx="14" ry="5" transform="rotate(-24 485 115)"/>
+    <ellipse cx="540" cy="125" rx="14" ry="5" transform="rotate(12 540 125)"/>
+    <!-- Row 4 -->
+    <ellipse cx="35" cy="158" rx="14" ry="5" transform="rotate(10 35 158)"/>
+    <ellipse cx="85" cy="165" rx="14" ry="5" transform="rotate(-15 85 165)"/>
+    <ellipse cx="140" cy="152" rx="14" ry="5" transform="rotate(25 140 152)"/>
+    <ellipse cx="195" cy="168" rx="14" ry="5" transform="rotate(-6 195 168)"/>
+    <ellipse cx="250" cy="155" rx="14" ry="5" transform="rotate(18 250 155)"/>
+    <ellipse cx="305" cy="162" rx="14" ry="5" transform="rotate(-22 305 162)"/>
+    <ellipse cx="360" cy="150" rx="14" ry="5" transform="rotate(8 360 150)"/>
+    <ellipse cx="415" cy="165" rx="14" ry="5" transform="rotate(-12 415 165)"/>
+    <ellipse cx="470" cy="158" rx="14" ry="5" transform="rotate(22 470 158)"/>
+    <ellipse cx="525" cy="168" rx="14" ry="5" transform="rotate(-18 525 168)"/>
+    <ellipse cx="575" cy="155" rx="14" ry="5" transform="rotate(4 575 155)"/>
+    <!-- Row 5-7 more grains -->
+    <ellipse cx="55" cy="200" rx="14" ry="5" transform="rotate(-10 55 200)"/>
+    <ellipse cx="110" cy="210" rx="14" ry="5" transform="rotate(15 110 210)"/>
+    <ellipse cx="165" cy="198" rx="14" ry="5" transform="rotate(-20 165 198)"/>
+    <ellipse cx="220" cy="208" rx="14" ry="5" transform="rotate(12 220 208)"/>
+    <ellipse cx="275" cy="195" rx="14" ry="5" transform="rotate(-5 275 195)"/>
+    <ellipse cx="330" cy="215" rx="14" ry="5" transform="rotate(20 330 215)"/>
+    <ellipse cx="385" cy="200" rx="14" ry="5" transform="rotate(-15 385 200)"/>
+    <ellipse cx="440" cy="212" rx="14" ry="5" transform="rotate(8 440 212)"/>
+    <ellipse cx="495" cy="198" rx="14" ry="5" transform="rotate(-25 495 198)"/>
+    <ellipse cx="550" cy="208" rx="14" ry="5" transform="rotate(14 550 208)"/>
+    <ellipse cx="40" cy="248" rx="14" ry="5" transform="rotate(18 40 248)"/>
+    <ellipse cx="95" cy="255" rx="14" ry="5" transform="rotate(-8 95 255)"/>
+    <ellipse cx="150" cy="242" rx="14" ry="5" transform="rotate(22 150 242)"/>
+    <ellipse cx="205" cy="258" rx="14" ry="5" transform="rotate(-14 205 258)"/>
+    <ellipse cx="260" cy="245" rx="14" ry="5" transform="rotate(6 260 245)"/>
+    <ellipse cx="315" cy="255" rx="14" ry="5" transform="rotate(-20 315 255)"/>
+    <ellipse cx="370" cy="240" rx="14" ry="5" transform="rotate(10 370 240)"/>
+    <ellipse cx="425" cy="252" rx="14" ry="5" transform="rotate(-8 425 252)"/>
+    <ellipse cx="480" cy="248" rx="14" ry="5" transform="rotate(16 480 248)"/>
+    <ellipse cx="535" cy="258" rx="14" ry="5" transform="rotate(-12 535 258)"/>
+    <ellipse cx="50" cy="290" rx="14" ry="5" transform="rotate(-16 50 290)"/>
+    <ellipse cx="110" cy="300" rx="14" ry="5" transform="rotate(10 110 300)"/>
+    <ellipse cx="170" cy="288" rx="14" ry="5" transform="rotate(-6 170 288)"/>
+    <ellipse cx="230" cy="302" rx="14" ry="5" transform="rotate(24 230 302)"/>
+    <ellipse cx="290" cy="292" rx="14" ry="5" transform="rotate(-18 290 292)"/>
+    <ellipse cx="350" cy="305" rx="14" ry="5" transform="rotate(8 350 305)"/>
+    <ellipse cx="410" cy="290" rx="14" ry="5" transform="rotate(-12 410 290)"/>
+    <ellipse cx="470" cy="298" rx="14" ry="5" transform="rotate(20 470 298)"/>
+    <ellipse cx="530" cy="288" rx="14" ry="5" transform="rotate(-22 530 288)"/>
+    <ellipse cx="575" cy="300" rx="14" ry="5" transform="rotate(6 575 300)"/>
+  </g>
+
+  <!-- Insects (dark brown beetle shapes) -->
+  <!-- Insect 1 -->
+  <g transform="translate(120, 140)">
+    <ellipse cx="0" cy="0" rx="10" ry="7" fill="#3d2b14"/>
+    <ellipse cx="-10" cy="0" rx="6" ry="5" fill="#4a3218"/>
+    <line x1="-15" y1="-4" x2="-22" y2="-10" stroke="#3d2b14" stroke-width="1"/>
+    <line x1="-15" y1="4" x2="-22" y2="10" stroke="#3d2b14" stroke-width="1"/>
+    <line x1="-5" y1="-6" x2="-8" y2="-14" stroke="#3d2b14" stroke-width="0.8"/>
+    <line x1="-5" y1="6" x2="-8" y2="14" stroke="#3d2b14" stroke-width="0.8"/>
+    <line x1="3" y1="-6" x2="6" y2="-13" stroke="#3d2b14" stroke-width="0.8"/>
+    <line x1="3" y1="6" x2="6" y2="13" stroke="#3d2b14" stroke-width="0.8"/>
+  </g>
+
+  <!-- Insect 2 -->
+  <g transform="translate(380, 90)">
+    <ellipse cx="0" cy="0" rx="9" ry="6" fill="#3d2b14"/>
+    <ellipse cx="-9" cy="0" rx="5" ry="4" fill="#4a3218"/>
+    <line x1="-13" y1="-3" x2="-19" y2="-9" stroke="#3d2b14" stroke-width="1"/>
+    <line x1="-13" y1="3" x2="-19" y2="9" stroke="#3d2b14" stroke-width="1"/>
+    <line x1="-4" y1="-5" x2="-7" y2="-12" stroke="#3d2b14" stroke-width="0.8"/>
+    <line x1="-4" y1="5" x2="-7" y2="12" stroke="#3d2b14" stroke-width="0.8"/>
+    <line x1="3" y1="-5" x2="5" y2="-11" stroke="#3d2b14" stroke-width="0.8"/>
+    <line x1="3" y1="5" x2="5" y2="11" stroke="#3d2b14" stroke-width="0.8"/>
+  </g>
+
+  <!-- Insect 3 -->
+  <g transform="translate(480, 230)">
+    <ellipse cx="0" cy="0" rx="11" ry="7" fill="#3d2b14"/>
+    <ellipse cx="-11" cy="0" rx="6" ry="5" fill="#4a3218"/>
+    <line x1="-16" y1="-4" x2="-23" y2="-10" stroke="#3d2b14" stroke-width="1"/>
+    <line x1="-16" y1="4" x2="-23" y2="10" stroke="#3d2b14" stroke-width="1"/>
+    <line x1="-6" y1="-6" x2="-9" y2="-14" stroke="#3d2b14" stroke-width="0.8"/>
+    <line x1="-6" y1="6" x2="-9" y2="14" stroke="#3d2b14" stroke-width="0.8"/>
+    <line x1="4" y1="-6" x2="7" y2="-13" stroke="#3d2b14" stroke-width="0.8"/>
+    <line x1="4" y1="6" x2="7" y2="13" stroke="#3d2b14" stroke-width="0.8"/>
+  </g>
+
+  <!-- Insect 4 -->
+  <g transform="translate(250, 270)">
+    <ellipse cx="0" cy="0" rx="8" ry="5" fill="#3d2b14"/>
+    <ellipse cx="-8" cy="0" rx="5" ry="4" fill="#4a3218"/>
+    <line x1="-12" y1="-3" x2="-18" y2="-8" stroke="#3d2b14" stroke-width="1"/>
+    <line x1="-12" y1="3" x2="-18" y2="8" stroke="#3d2b14" stroke-width="1"/>
+    <line x1="-4" y1="-4" x2="-6" y2="-10" stroke="#3d2b14" stroke-width="0.8"/>
+    <line x1="-4" y1="4" x2="-6" y2="10" stroke="#3d2b14" stroke-width="0.8"/>
+  </g>
+
+  <!-- BOUNDING BOXES with labels -->
+  <!-- Box 1 around insect 1 -->
+  <rect x="88" y="118" width="52" height="46" fill="none" stroke="#00ff41" stroke-width="2.5" rx="2"/>
+  <rect x="88" y="106" width="68" height="14" fill="#00ff41" rx="2"/>
+  <text x="92" y="116" fill="#000" font-family="monospace" font-size="10" font-weight="bold">insect 0.94</text>
+
+  <!-- Box 2 around insect 2 -->
+  <rect x="350" y="68" width="50" height="44" fill="none" stroke="#00ff41" stroke-width="2.5" rx="2"/>
+  <rect x="350" y="56" width="68" height="14" fill="#00ff41" rx="2"/>
+  <text x="354" y="66" fill="#000" font-family="monospace" font-size="10" font-weight="bold">insect 0.91</text>
+
+  <!-- Box 3 around insect 3 -->
+  <rect x="446" y="208" width="56" height="48" fill="none" stroke="#00ff41" stroke-width="2.5" rx="2"/>
+  <rect x="446" y="196" width="68" height="14" fill="#00ff41" rx="2"/>
+  <text x="450" y="206" fill="#000" font-family="monospace" font-size="10" font-weight="bold">insect 0.87</text>
+
+  <!-- Box 4 around insect 4 -->
+  <rect x="222" y="252" width="44" height="38" fill="none" stroke="#00ff41" stroke-width="2.5" rx="2"/>
+  <rect x="222" y="240" width="68" height="14" fill="#00ff41" rx="2"/>
+  <text x="226" y="250" fill="#000" font-family="monospace" font-size="10" font-weight="bold">insect 0.89</text>
+
+  <!-- HUD overlay - model info -->
+  <rect x="10" y="10" width="180" height="28" fill="rgba(0,0,0,0.7)" rx="4"/>
+  <text x="18" y="28" fill="#00ff41" font-family="monospace" font-size="11">YOLOv8 | Detections: 4</text>
+
+  <rect x="410" y="10" width="180" height="28" fill="rgba(0,0,0,0.7)" rx="4"/>
+  <text x="418" y="28" fill="#00ff41" font-family="monospace" font-size="11">Conf: 0.87-0.94</text>
+
+  <!-- Bottom bar -->
+  <rect x="0" y="318" width="600" height="22" fill="rgba(0,0,0,0.6)"/>
+  <text x="10" y="334" fill="#00ff41" font-family="monospace" font-size="10">Rice Sample #047 | Frame: 1/1 | Insect Contamination Detection Pipeline</text>
+</svg>

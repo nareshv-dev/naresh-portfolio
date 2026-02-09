@@ -1,0 +1,320 @@
+---
+const certifications = [
+  {
+    provider: "DeepLearning.AI",
+    logo: "https://www.google.com/s2/favicons?domain=deeplearning.ai&sz=128",
+    color: "from-blue-500 to-indigo-600",
+    badges: [],
+    certificate: "/images/certificates/deeplearning-ml-specialization.png",
+    certs: [
+      { name: "Supervised ML: Regression & Classification", date: "Nov 2023" },
+      { name: "Advanced Learning Algorithms", date: "Dec 2023" },
+      { name: "Unsupervised Learning, Recommenders, RL", date: "Jan 2024" }
+    ],
+    subtitle: "Machine Learning Specialization · Stanford University & DeepLearning.AI",
+    instructor: "Andrew Ng",
+    topics: ["Linear Regression", "Neural Networks", "Decision Trees", "Clustering", "Recommender Systems", "Reinforcement Learning"],
+    verify: "https://coursera.org/verify/specialization/UEUN73SDN4GF"
+  },
+  {
+    provider: "Google",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg",
+    color: "from-green-400 to-emerald-500",
+    certificate: "",
+    badges: [
+      { img: "/images/badges/google-linear-regression.png", label: "Linear Regression" },
+      { img: "/images/badges/google-logistic-regression.png", label: "Logistic Regression" },
+      { img: "/images/badges/google-classification.png", label: "Classification" }
+    ],
+    certs: [
+      { name: "ML Crash Course: Linear Regression", date: "Dec 2025" },
+      { name: "ML Crash Course: Logistic Regression", date: "Dec 2025" },
+      { name: "ML Crash Course: Classification", date: "Dec 2025" },
+      { name: "GDG DevFest 2023", date: "10/2023" }
+    ],
+    verify: "https://developers.google.com/profile/u/116125581086050406836"
+  },
+  {
+    provider: "Salesforce Trailhead",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/salesforce/salesforce-original.svg",
+    color: "from-sky-400 to-blue-500",
+    certificate: "",
+    badges: [
+      { img: "/images/badges/sf-llm.png", label: "LLMs" },
+      { img: "/images/badges/sf-nlp.png", label: "NLP" },
+      { img: "/images/badges/sf-agentforce.png", label: "Agentforce" },
+      { img: "/images/badges/sf-genai.png", label: "GenAI" },
+      { img: "/images/badges/sf-ai-fundamentals.png", label: "AI Basics" }
+    ],
+    certs: [
+      { name: "Large Language Models", date: "Dec 2025" },
+      { name: "Natural Language Processing Basics", date: "Dec 2025" },
+      { name: "Generative AI Basics", date: "Dec 2025" },
+      { name: "AI Fundamentals", date: "Dec 2025" },
+      { name: "Cert Prep: Agentforce Specialist", date: "Dec 2025" }
+    ]
+  },
+  {
+    provider: "Kaggle",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kaggle/kaggle-original.svg",
+    color: "from-teal-400 to-cyan-500",
+    badges: [],
+    certificate: "",
+    certs: [
+      { name: "Intro to Programming", date: "2025" },
+      { name: "Intro to Machine Learning", date: "2025" },
+      { name: "Pandas", date: "2025" },
+      { name: "5-Days AI Agents Intensive Course", date: "2025" }
+    ],
+    verify: "https://www.kaggle.com/nareshv16"
+  },
+  {
+    provider: "Great Learning",
+    logo: "https://www.google.com/s2/favicons?domain=greatlearning.in&sz=128",
+    color: "from-teal-400 to-cyan-600",
+    badges: [],
+    certificate: "",
+    certs: [
+      { name: "Python Data Structures", date: "Jun 2024" },
+      { name: "Data Visualization with Power BI", date: "Aug 2024" },
+      { name: "UI / UX for Beginners", date: "Jun 2024" }
+    ]
+  }
+];
+---
+
+<section id="certifications" class="py-20 px-6 bg-navy">
+  <div class="container mx-auto max-w-6xl">
+
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <span class="text-accent text-base font-semibold tracking-widest uppercase">Credentials</span>
+      <h2 class="text-4xl font-bold text-white mt-2">Certifications</h2>
+      <div class="w-16 h-1 bg-accent mx-auto mt-4 rounded-full"></div>
+    </div>
+
+    <!-- Certifications Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {certifications.map((group, i) => (
+        <div class="cert-card group p-6 rounded-2xl border border-white/15 bg-white/5 backdrop-blur-sm hover:border-white/30 transition-all duration-300 hover:shadow-lg hover:shadow-white/10 flex flex-col" style={`animation-delay: ${i * 0.1}s`}>
+
+          <!-- Provider Header -->
+          <div class="flex items-center gap-3 mb-2">
+            <div class="w-10 h-10 rounded-lg bg-white flex items-center justify-center flex-shrink-0 overflow-hidden p-2">
+              <img src={group.logo} alt={group.provider} class="w-full h-full object-contain" loading="lazy" />
+            </div>
+            <h3 class="text-lg font-bold text-white">{group.provider}</h3>
+          </div>
+
+          <!-- Subtitle & Instructor -->
+          {group.subtitle && (
+            <p class="text-white/40 text-xs leading-snug mb-1 ml-[52px]">{group.subtitle}</p>
+          )}
+          {group.instructor && (
+            <p class="text-white/30 text-[11px] mb-4 ml-[52px]"><i class="fas fa-chalkboard-teacher mr-1 text-accent/60"></i>Instructor: {group.instructor}</p>
+          )}
+          {!group.subtitle && <div class="mb-3"></div>}
+
+          <!-- Cert List -->
+          <ul class="space-y-3 flex-1">
+            {group.certs.map((cert) => (
+              <li class="flex items-start gap-2">
+                <i class="fas fa-certificate text-accent text-xs mt-1.5 flex-shrink-0"></i>
+                <div>
+                  <p class="text-white/70 text-sm leading-snug">{cert.name}</p>
+                  <p class="text-white/30 text-xs mt-0.5">{cert.date}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+
+          <!-- Topics Tags -->
+          {group.topics && group.topics.length > 0 && (
+            <div class="mt-3 pt-3 border-t border-white/10">
+              <p class="text-white/30 text-[10px] uppercase tracking-wider font-semibold mb-2">Key Topics</p>
+              <div class="flex flex-wrap gap-1.5">
+                {group.topics.map((topic) => (
+                  <span class="px-2 py-0.5 text-[10px] rounded-full border border-white/10 bg-white/5 text-white/40">{topic}</span>
+                ))}
+              </div>
+            </div>
+          )}
+
+          <!-- Badge Showcase Row -->
+          {group.badges.length > 0 && (
+            <div class="mt-4 pt-4 border-t border-white/10">
+              <p class="text-white/30 text-[10px] uppercase tracking-wider font-semibold mb-3">Earned Badges</p>
+              <div class="badge-row flex gap-4 overflow-x-auto pb-2">
+                {group.badges.map((badge) => (
+                  <div class="badge-item flex flex-col items-center gap-2 flex-shrink-0 group/badge">
+                    <div class="w-16 h-16 rounded-full bg-white border-2 border-white/20 overflow-hidden transition-all duration-300 group-hover/badge:border-accent group-hover/badge:scale-110 group-hover/badge:shadow-lg group-hover/badge:shadow-accent/20">
+                      <img src={badge.img} alt={badge.label} class="w-full h-full object-cover" loading="lazy" />
+                    </div>
+                    <span class="text-white/40 text-[10px] text-center leading-tight max-w-[64px] group-hover/badge:text-white/70 transition-colors font-medium">{badge.label}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          <!-- Count badge & Verify -->
+          <div class="mt-4 pt-4 border-t border-white/10 flex items-center justify-between">
+            <span class="px-3 py-1 text-xs font-semibold rounded-full border border-white/20 bg-white/5 text-white/50">
+              {group.certs.length} {group.provider === "Google" || group.provider === "Salesforce Trailhead" ? (group.certs.length === 1 ? 'Badge' : 'Badges') : (group.certs.length === 1 ? 'Certificate' : 'Certificates')}
+            </span>
+            <div class="flex items-center gap-3">
+              {group.certificate && (
+                <button data-cert-img={group.certificate} data-cert-title={group.provider} class="view-cert-btn text-accent/60 hover:text-accent text-[11px] font-medium transition-colors flex items-center gap-1 cursor-pointer bg-transparent border-none">
+                  <i class="fas fa-eye text-[9px]"></i> View Certificate
+                </button>
+              )}
+              {group.verify && (
+                <a href={group.verify} target="_blank" rel="noopener noreferrer" class="text-accent/60 hover:text-accent text-[11px] font-medium transition-colors flex items-center gap-1">
+                  <i class="fas fa-external-link-alt text-[9px]"></i> Verify
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
+
+<!-- Certificate Modal -->
+<div id="cert-modal" class="cert-modal hidden">
+  <div class="cert-modal-backdrop" id="cert-modal-backdrop"></div>
+  <div class="cert-modal-content">
+    <button id="cert-modal-close" class="cert-modal-close">
+      <i class="fas fa-times"></i>
+    </button>
+    <h3 id="cert-modal-title" class="text-white text-lg font-bold mb-4 text-center"></h3>
+    <img id="cert-modal-img" src="" alt="Certificate" class="cert-modal-img" />
+  </div>
+</div>
+
+<style>
+  .cert-card {
+    animation: cert-fade 0.6s ease-out both;
+  }
+
+  .cert-card:hover {
+    transform: translateY(-4px);
+  }
+
+  @keyframes cert-fade {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .badge-row::-webkit-scrollbar {
+    height: 3px;
+  }
+  .badge-row::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .badge-row::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+  }
+  .badge-row::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  /* Certificate Modal */
+  .cert-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+  }
+  .cert-modal.hidden {
+    display: none;
+  }
+  .cert-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+  }
+  .cert-modal-content {
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+    background: #1a1f2e;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    animation: modal-in 0.3s ease-out;
+  }
+  .cert-modal-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.8rem;
+  }
+  .cert-modal-close:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+  }
+  .cert-modal-img {
+    width: 100%;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  }
+  @keyframes modal-in {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+</style>
+
+<script>
+  const modal = document.getElementById('cert-modal');
+  const modalImg = document.getElementById('cert-modal-img') as HTMLImageElement;
+  const modalTitle = document.getElementById('cert-modal-title');
+  const modalClose = document.getElementById('cert-modal-close');
+  const modalBackdrop = document.getElementById('cert-modal-backdrop');
+
+  document.querySelectorAll('.view-cert-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const imgSrc = btn.getAttribute('data-cert-img');
+      const title = btn.getAttribute('data-cert-title');
+      if (modalImg && imgSrc) modalImg.src = imgSrc;
+      if (modalTitle && title) modalTitle.textContent = title + ' — Certificate';
+      modal?.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function closeModal() {
+    modal?.classList.add('hidden');
+    document.body.style.overflow = '';
+  }
+
+  modalClose?.addEventListener('click', closeModal);
+  modalBackdrop?.addEventListener('click', closeModal);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
+  });
+</script>
