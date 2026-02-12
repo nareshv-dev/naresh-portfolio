@@ -7,6 +7,7 @@ const awards = [
     type: "Hackathon",
     icon: "fas fa-code",
     color: "from-amber-400 to-yellow-500",
+    date: "Mar 2025",
   },
   {
     event: "KPR Ignitron Trophy",
@@ -15,6 +16,7 @@ const awards = [
     type: "Hackathon",
     icon: "fas fa-code",
     color: "from-yellow-300 to-amber-400",
+    date: "Sep 2024",
   },
   {
     event: 'Nehru College "Cybernautz"',
@@ -23,6 +25,7 @@ const awards = [
     type: "Paper Presentation",
     icon: "fas fa-file-alt",
     color: "from-yellow-300 to-amber-400",
+    date: "Apr 2025",
   },
   {
     event: "KGiSL College",
@@ -39,6 +42,7 @@ const awards = [
     type: "Paper Presentation",
     icon: "fas fa-file-alt",
     color: "from-amber-400 to-yellow-500",
+    date: "Oct 2024",
   },
   {
     event: "IEEE Ideatronic",
@@ -47,6 +51,7 @@ const awards = [
     type: "Paper Presentation",
     icon: "fas fa-file-alt",
     color: "from-amber-400 to-yellow-500",
+    date: "May 2025",
   },
 ];
 
@@ -96,7 +101,7 @@ function getMedalIcon(prize: string) {
             <h3 class="text-white font-bold text-lg leading-snug mb-1">{award.event}</h3>
 
             <!-- Details -->
-            <div class="flex items-center gap-3 mt-3">
+            <div class="flex items-center gap-3 mt-3 flex-wrap">
               <span class="text-white/40 text-xs flex items-center gap-1.5">
                 <i class={`${award.icon} text-[10px]`}></i>
                 {award.type}
@@ -106,6 +111,15 @@ function getMedalIcon(prize: string) {
                 <i class="fas fa-building text-[10px]"></i>
                 {award.organizer}
               </span>
+              {award.date && (
+                <>
+                  <span class="text-white/20">•</span>
+                  <span class="text-white/40 text-xs flex items-center gap-1.5">
+                    <i class="fas fa-calendar text-[10px]"></i>
+                    {award.date}
+                  </span>
+                </>
+              )}
             </div>
           </div>
         );
