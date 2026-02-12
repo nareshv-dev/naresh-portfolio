@@ -1,4 +1,5 @@
 ---
+const base = import.meta.env.BASE_URL;
 const projects = [
   {
     title: "MedConnect: Offline AI Chatbot for Rural Healthcare",
@@ -17,7 +18,7 @@ const projects = [
     description: [
       "Designed a system to identify insect contamination in agricultural products using structured analysis and advanced pattern recognition techniques."
     ],
-    image: "/images/insect-detection.svg",
+    image: `${base}images/insect-detection.svg`,
     github: "https://github.com/nareshv-dev/Insect-Contamination-Detection",
     tags: ["Computer Vision", "Agriculture", "Deep Learning"]
   },
@@ -38,7 +39,7 @@ const projects = [
     description: [
       "Developed a real-time monocular camera–based fall detection system achieving 96% accuracy using pose estimation."
     ],
-    image: "/images/fall-detection.jpg",
+    image: `${base}images/fall-detection.jpg`,
     github: "https://github.com/nareshv-dev/Fall-Detection-System",
     tags: ["Pose Estimation", "Real-Time AI", "Healthcare"]
   },
@@ -49,7 +50,7 @@ const projects = [
       "Built an AI-based system to detect sensitive personal information across text and image data with secure encryption.",
       "Ensured privacy compliance and scalability through optimized data processing."
     ],
-    image: "/images/pii-detection.svg",
+    image: `${base}images/pii-detection.svg`,
     github: "https://github.com/nareshv-dev/PII-Detection-Encryption",
     tags: ["NLP", "Data Privacy", "Encryption"]
   }

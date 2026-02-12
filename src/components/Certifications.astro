@@ -1,11 +1,12 @@
 ---
+const base = import.meta.env.BASE_URL;
 const certifications = [
   {
     provider: "DeepLearning.AI",
     logo: "https://www.google.com/s2/favicons?domain=deeplearning.ai&sz=128",
     color: "from-blue-500 to-indigo-600",
     badges: [],
-    certificate: "/images/certificates/deeplearning-ml-specialization.png",
+    certificate: `${base}images/certificates/deeplearning-ml-specialization.png`,
     certs: [
       { name: "Supervised ML: Regression & Classification", date: "Nov 2023" },
       { name: "Advanced Learning Algorithms", date: "Dec 2023" },
@@ -22,10 +23,10 @@ const certifications = [
     color: "from-green-400 to-emerald-500",
     certificate: "",
     badges: [
-      { img: "/images/badges/google-linear-regression.png", label: "Linear Regression" },
-      { img: "/images/badges/google-logistic-regression.png", label: "Logistic Regression" },
-      { img: "/images/badges/google-classification.png", label: "Classification" },
-      { img: "/images/badges/google-devfest-2023.svg", label: "DevFest 2023" }
+      { img: `${base}images/badges/google-linear-regression.png`, label: "Linear Regression" },
+      { img: `${base}images/badges/google-logistic-regression.png`, label: "Logistic Regression" },
+      { img: `${base}images/badges/google-classification.png`, label: "Classification" },
+      { img: `${base}images/badges/google-devfest-2023.svg`, label: "DevFest 2023" }
     ],
     certs: [
       { name: "ML Crash Course: Linear Regression", date: "Dec 2025" },
@@ -41,11 +42,11 @@ const certifications = [
     color: "from-sky-400 to-blue-500",
     certificate: "",
     badges: [
-      { img: "/images/badges/sf-llm.png", label: "LLMs" },
-      { img: "/images/badges/sf-nlp.png", label: "NLP" },
-      { img: "/images/badges/sf-agentforce.png", label: "Agentforce" },
-      { img: "/images/badges/sf-genai.png", label: "GenAI" },
-      { img: "/images/badges/sf-ai-fundamentals.png", label: "AI Basics" }
+      { img: `${base}images/badges/sf-llm.png`, label: "LLMs" },
+      { img: `${base}images/badges/sf-nlp.png`, label: "NLP" },
+      { img: `${base}images/badges/sf-agentforce.png`, label: "Agentforce" },
+      { img: `${base}images/badges/sf-genai.png`, label: "GenAI" },
+      { img: `${base}images/badges/sf-ai-fundamentals.png`, label: "AI Basics" }
     ],
     certs: [
       { name: "Large Language Models", date: "Dec 2025" },
